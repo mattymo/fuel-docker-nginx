@@ -1,5 +1,5 @@
 #!/bin/bash
-puppet apply -v /root/site.pp
 mkdir -p /var/www/nailgun/dump
 chmod -R 755 /var/www/nailgun/dump
+puppet apply -v /etc/puppet/modules/nailgun/examples/nginx-only.pp
 nginx -g 'daemon off;'

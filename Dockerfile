@@ -18,7 +18,7 @@ ADD etc /etc
 ADD site.pp /root/site.pp
 RUN mkdir -p /var/www/nailgun
 RUN chmod 755 /var/www/nailgun
-RUN puppet apply -v site.pp
+RUN puppet apply -v /etc/puppet/modules/nailgun/examples/nginx-only.pp
 
 RUN mkdir -p /usr/local/bin
 ADD start.sh /usr/local/bin/start.sh
