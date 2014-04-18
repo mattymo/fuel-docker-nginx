@@ -15,7 +15,6 @@ RUN yum --quiet install -y ruby21-puppet
 RUN yum --quiet -y install nginx
 
 ADD etc /etc
-ADD site.pp /root/site.pp
 RUN mkdir -p /var/www/nailgun
 RUN chmod 755 /var/www/nailgun
 RUN puppet apply -v /etc/puppet/modules/nailgun/examples/nginx-only.pp
